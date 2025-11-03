@@ -1,0 +1,22 @@
+package components
+
+templ Layout(children ...templ.Component) {
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>PasteBin</title>
+    <link href="/static/styles.css" rel="stylesheet"/>
+    <link href="/static/toasify.css" rel="stylesheet"/>
+    <script defer src="/static/alpine.js"></script>
+    <script src="/static/toasitfy.js"></script>
+    <script src="/static/utils.js"></script>
+  </head>
+  <body>
+    for _, child := range children {
+      @child
+    }
+  </body>
+  </html>
+}
